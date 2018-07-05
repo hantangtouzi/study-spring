@@ -14,8 +14,4 @@
     <name>study-spring-bean-wiring-auto</name>
     <url>http://www.example.com</url>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
 </project>
