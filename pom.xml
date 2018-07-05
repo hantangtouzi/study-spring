@@ -13,6 +13,7 @@
     <modules>
         <module>study-spring-bean-lifecycle</module>
         <module>study-spring-bean-wiring-auto</module>
+        <module>study-spring-bean-wiring-profile</module>
     </modules>
 
     <properties>
