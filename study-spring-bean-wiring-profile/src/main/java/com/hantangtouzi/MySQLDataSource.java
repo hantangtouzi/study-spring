@@ -1,5 +1,6 @@
 package com.hantangtouzi;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-//@Profile("product")
+@Profile("product")
 public class MySQLDataSource implements DataSource {
     public String getConnection() {
         return "this is an Connection from mysql";

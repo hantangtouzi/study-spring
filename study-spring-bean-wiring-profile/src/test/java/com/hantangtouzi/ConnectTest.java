@@ -3,7 +3,7 @@ package com.hantangtouzi;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Profile;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -14,14 +14,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = ApplicationConfig.class)
-@Profile("dev")
+@ActiveProfiles("product")
 public class ConnectTest {
     @Autowired
     private DataSource dataSource;
 
     @Test
     public void testGetConnection() {
-        //assertNotNull(dataSource);
         String dataBaseType = dataSource.getConnection();
         System.out.println(dataBaseType);
     }
