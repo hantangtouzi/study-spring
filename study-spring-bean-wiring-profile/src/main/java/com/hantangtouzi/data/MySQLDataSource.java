@@ -1,11 +1,10 @@
-package com.hantangtouzi;
+package com.hantangtouzi.data;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 /**
- * @author WilliamChang.
- * @created on 2018/7/6 1:59
+ * @author WilliamChang created on 2018/7/6 1:59.
  */
 
 @Component
