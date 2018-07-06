@@ -11,10 +11,10 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>bean-scope</module>
         <module>bean-lifecycle</module>
         <module>bean-wiring-auto</module>
         <module>bean-wiring-profile</module>
+        <module>bean-scope</module>
     </modules>
 
     <properties>
