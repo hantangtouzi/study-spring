@@ -9,9 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>study-spring-bean-lifecycle</artifactId>
+    <artifactId>bean-wiring-profile</artifactId>
 
-    <name>study-spring-bean-lifecycle</name>
-    <url>http://www.example.com</url>
-
+    <name>bean-wiring-profile</name>
 </project>

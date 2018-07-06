@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>study-spring-bean-wiring-auto</artifactId>
+    <artifactId>bean-scope</artifactId>
 
-    <name>study-spring-bean-wiring-auto</name>
+    <name>bean-scope</name>
     <url>http://www.example.com</url>
 
 </project>
