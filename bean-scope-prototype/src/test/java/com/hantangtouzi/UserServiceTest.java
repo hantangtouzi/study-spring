@@ -18,15 +18,17 @@ import static org.junit.Assert.assertNotNull;
 @ContextConfiguration(classes = ApplicationConfig.class)
 public class UserServiceTest {
     @Autowired
-    private UserService userService;
+    private UserService userService1;
+    @Autowired
+    private UserService userService2;
 
     @Test
     public void userServiceShouldNotBeNull() {
-        assertNotNull(userService);
+        assertNotNull(userService1);
     }
 
     @Test
     public void testUserService() {
-        Assert.assertNotEquals(userService.hashCode(), userService.hashCode());
+        Assert.assertNotEquals(userService1.hashCode(), userService2.hashCode());
     }
 }
