@@ -1,6 +1,7 @@
 package com.hantangtouzi;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ public class UserServiceTest {
     private UserService userService2;
 
     @Test
+    @Ignore
     public void userServiceShouldNotBeNull() {
         assertNotNull(userService1);
     }

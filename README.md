@@ -5,9 +5,10 @@
 
 #### 软件架构
 1. bean-lifecycle：主要功能是展示Spring中的Bean的生命周期.
-2. bean-scope：主要功能是展示Spring中的Bean的作用域（Singleton和Prototype）.
-3. bean-wiring-auto：主要功能是展示Spring中的Bean的自动装配.
-4. bean-wiring-profile：主要功能是展示Spring中的Bean装配时选择不同的profile.
+2. bean-scope-prototype：主要功能是展示Spring中的Bean的作用域（Prototype）.
+3. bean-scope-singleton：主要功能是展示Spring中的Bean的作用域（Singleton）.
+4. bean-wiring-auto：主要功能是展示Spring中的Bean的自动装配.
+5. bean-wiring-profile：主要功能是展示Spring中的Bean装配时选择不同的profile.
 
 
 #### 安装教程
