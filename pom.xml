@@ -15,6 +15,7 @@
         <module>bean-wiring-auto</module>
         <module>bean-wiring-profile</module>
         <module>bean-scope-singleton</module>
+        <module>bean-scope-prototype</module>
     </modules>
 
     <properties>
