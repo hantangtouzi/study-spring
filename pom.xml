@@ -14,15 +14,15 @@
         <module>bean-lifecycle</module>
         <module>bean-wiring-auto</module>
         <module>bean-wiring-profile</module>
-        <module>bean-scope</module>
+        <module>bean-scope-singleton</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.version>5.0.7.RELEASE</spring.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <spring.version>5.0.7.RELEASE</spring.version>
     </properties>
 
     <dependencies>
