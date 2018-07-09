@@ -16,6 +16,7 @@
         <module>bean-wiring-profile</module>
         <module>bean-scope-singleton</module>
         <module>bean-scope-prototype</module>
+        <module>mvc-annotation</module>
     </modules>
 
     <properties>
