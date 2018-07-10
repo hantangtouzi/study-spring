@@ -20,6 +20,15 @@
         <module>mvc-xml</module>
         <module>mvc-form</module>
         <module>mvc-thymeleaf</module>
+        <module>mvc-skeleton</module>
+        <module>data-jdbc</module>
+        <module>data-orm</module>
+        <module>data-nosql-mongodb</module>
+        <module>data-nosql-neo4j</module>
+        <module>data-nosql-redis</module>
+        <module>data-cache</module>
+        <module>security-method</module>
+        <module>mvc-restful</module>
     </modules>
 
     <properties>

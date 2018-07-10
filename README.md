@@ -9,6 +9,7 @@
 3. bean-scope-singleton：主要功能是展示Spring中的Bean的作用域（Singleton）.
 4. bean-wiring-auto：主要功能是展示Spring中的Bean的自动装配.
 5. bean-wiring-profile：主要功能是展示Spring中的Bean装配时选择不同的profile.
+6. mvc-skeleton：主要功能是展示Spring mvc项目中从dao到显示模版的全套框架的极简配置.
 
 
 #### 安装教程
