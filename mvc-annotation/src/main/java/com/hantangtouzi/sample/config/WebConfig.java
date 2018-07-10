@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * @author WilliamChang.
- * created on 2018/7/10 0:28
+ * Created on 2018/7/10 0:28
  */
 
 @Configuration
