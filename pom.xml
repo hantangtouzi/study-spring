@@ -19,6 +19,7 @@
         <module>mvc-annotation</module>
         <module>mvc-xml</module>
         <module>mvc-form</module>
+        <module>mvc-thymeleaf</module>
     </modules>
 
     <properties>
