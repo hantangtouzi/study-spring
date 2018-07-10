@@ -18,6 +18,7 @@
         <module>bean-scope-prototype</module>
         <module>mvc-annotation</module>
         <module>mvc-xml</module>
+        <module>mvc-form</module>
     </modules>
 
     <properties>
