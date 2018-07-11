@@ -29,6 +29,7 @@
         <module>data-cache</module>
         <module>mvc-restful</module>
         <module>data-orm-hibernate</module>
+        <module>data-orm-jpa-hibernate</module>
     </modules>
 
     <properties>
