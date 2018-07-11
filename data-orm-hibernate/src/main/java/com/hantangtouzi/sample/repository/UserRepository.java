@@ -13,4 +13,6 @@ public interface UserRepository {
     User getUserById(Long id);
 
     List<User> findUsers();
+
+    User saveUser(User user);
 }

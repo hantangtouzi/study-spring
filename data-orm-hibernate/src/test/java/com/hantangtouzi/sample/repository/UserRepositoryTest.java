@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.transaction.Transactional;
+
 /**
  * @author WilliamChang.
  * Created on 2018/7/11 16:31
@@ -20,6 +22,7 @@ public class UserRepositoryTest {
     private UserRepository userRepository;
 
     @Test
+    @Transactional
     public void testGetUserById() {
         //System.out.println(userRepository == null);
         Long id = 1L;

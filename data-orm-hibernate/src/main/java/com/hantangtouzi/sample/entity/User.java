@@ -1,16 +1,33 @@
 package com.hantangtouzi.sample.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * @author WilliamChang.
  * Created on 2018/7/11 16:11
  */
 
+@Entity(name = "t_user")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String username;
 
     private String password;
+
+    public User() {
+    }
+
+    public User(Long id, String username, String password) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+    }
 
     public Long getId() {
         return id;
