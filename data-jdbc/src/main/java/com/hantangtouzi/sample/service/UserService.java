@@ -5,6 +5,8 @@ import com.hantangtouzi.sample.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author WilliamChang.
  * Created on 2018/7/11 3:42
@@ -17,5 +19,9 @@ public class UserService {
 
     public User getUserById(Long id) {
         return userDao.getUserById(id);
+    }
+
+    public List<User> findUsers() {
+        return userDao.findUsers();
     }
 }
