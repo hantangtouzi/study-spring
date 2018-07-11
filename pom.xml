@@ -28,6 +28,7 @@
         <module>data-nosql-redis</module>
         <module>data-cache</module>
         <module>mvc-restful</module>
+        <module>data-orm-hibernate</module>
     </modules>
 
     <properties>
