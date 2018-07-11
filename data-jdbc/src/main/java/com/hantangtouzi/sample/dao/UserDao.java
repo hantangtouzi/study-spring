@@ -29,7 +29,7 @@ public class UserDao {
     public User getUserById(Long id) {
         Map<String, Object> map = new HashMap<>();
         map.put("id", id);
-        return namedParameterJdbcTemplate.queryForObject("select * from t_user where id = ?", map, new RowMapper<User>() {
+        return namedParameterJdbcTemplate.queryForObject("select * from t_user where id = :id", map, new RowMapper<User>() {
             @Override
             public User mapRow(ResultSet rs, int rowNum) throws SQLException {
                 User user = new User();
