@@ -26,7 +26,8 @@ public class HibernateUserRepository implements UserRepository {
 
     @Override
     public List<User> findUsers() {
-        return null;
+        String hql = "from t_user";
+        return sessionFactory.getCurrentSession().createQuery(hql, User.class).getResultList();
     }
 
     @Override
