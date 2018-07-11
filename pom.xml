@@ -27,7 +27,6 @@
         <module>data-nosql-neo4j</module>
         <module>data-nosql-redis</module>
         <module>data-cache</module>
-        <module>security-method</module>
         <module>mvc-restful</module>
     </modules>
 
