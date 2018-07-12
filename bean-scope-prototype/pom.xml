@@ -12,4 +12,12 @@
     <artifactId>bean-scope-prototype</artifactId>
 
     <name>bean-scope-prototype</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.0.6.RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>
