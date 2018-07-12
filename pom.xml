@@ -31,6 +31,7 @@
         <module>data-orm-hibernate</module>
         <module>data-orm-jpa-hibernate</module>
         <module>mvc-exception</module>
+        <module>spring-mvc-mybatis</module>
     </modules>
 
     <properties>
