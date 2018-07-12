@@ -9,5 +9,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  */
 
 @ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "User Not Found")
-public class UserNoFoundException extends BusinessException {
+public class UserNotFoundException extends BusinessException {
+
 }

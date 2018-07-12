@@ -1,7 +1,7 @@
 package com.hantangtouzi.sample.controller;
 
 import com.hantangtouzi.sample.entity.User;
-import com.hantangtouzi.sample.exception.UserNoFoundException;
+import com.hantangtouzi.sample.exception.UserNotFoundException;
 import com.hantangtouzi.sample.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,14 +22,16 @@ public class UserController {
 
     @RequestMapping("/list/{id}")
     public String list(@PathVariable("id") Long id, Model model) {
-        try {
-            User user = userService.getUserById(id);
-            model.addAttribute("user", user);
-            return "userList";
-        } catch (UserNoFoundException e) {
-            System.out.println("发生500错误");
-            return "error/500";
+        User user = userService.getUserById(id);
+        if (user == null) {
+            throw new UserNotFoundException();
         }
-
+        model.addAttribute("user", user);
+        return "userList";
     }
+
+    //@ExceptionHandler(UserNotFoundException.class)
+    //public String handleUserNotFoundException() {
+    //    return "error/500";
+    //}
 }
