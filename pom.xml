@@ -30,6 +30,7 @@
         <module>mvc-restful</module>
         <module>data-orm-hibernate</module>
         <module>data-orm-jpa-hibernate</module>
+        <module>mvc-exception</module>
     </modules>
 
     <properties>
