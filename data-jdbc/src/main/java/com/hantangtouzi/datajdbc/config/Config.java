@@ -1,6 +1,8 @@
 package com.hantangtouzi.datajdbc.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
@@ -13,10 +15,11 @@ import javax.sql.DataSource;
  * Created on 2018/7/11 3:05
  */
 
-// @Configuration
-public class DataConfig {
-    //@Bean
-    //public DruidDataSource dataSource() {
+@Configuration
+@ComponentScan(basePackages = "com.hantangtouzi.datajdbc")
+public class Config {
+    // @Bean
+    // public DruidDataSource dataSource() {
     //    DruidDataSource druidDataSource = new DruidDataSource();
     //    druidDataSource.setDriverClassName("org.h2.Driver");
     //    druidDataSource.setUrl("jdbc:h2:tcp://localhost/~/test");
@@ -25,7 +28,7 @@ public class DataConfig {
     //    druidDataSource.setInitialSize(5);
     //    druidDataSource.setMaxActive(10);
     //    return druidDataSource;
-    //}
+    // }
 
     @Bean
     public DataSource dataSource() {
