@@ -29,29 +29,11 @@ public class UserDao {
     public User getUserById(Long id) {
         Map<String, Object> map = new HashMap<>();
         map.put("id", id);
-        return namedParameterJdbcTemplate.queryForObject("select * from t_user where id = :id", map, new RowMapper<User>() {
-            @Override
-            public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-                User user = new User();
-                user.setId(rs.getLong("id"));
-                user.setUsername(rs.getString("username"));
-                user.setPassword(rs.getString("password"));
-                return user;
-            }
-        });
+        return namedParameterJdbcTemplate.queryForObject("select * from t_user where id = :id", map, new UserRowMapper());
     }
 
     public List<User> findUsers() {
-        return jdbcTemplate.query("select * from t_user", new RowMapper<User>() {
-            @Override
-            public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-                User user = new User();
-                user.setId(rs.getLong("id"));
-                user.setUsername(rs.getString("username"));
-                user.setPassword(rs.getString("password"));
-                return user;
-            }
-        });
+        return jdbcTemplate.query("select * from t_user", new UserRowMapper());
     }
 
     public void addUser(User user) {
@@ -65,4 +47,16 @@ public class UserDao {
     public void updateUser(User user) {
         jdbcTemplate.update("update t_user set username = ?, password = ? where id = ?", user.getUsername(), user.getPassword(), user.getId());
     }
+
+    private class UserRowMapper implements RowMapper<User> {
+        @Override
+        public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+            User user = new User();
+            user.setId(rs.getLong("id"));
+            user.setUsername(rs.getString("username"));
+            user.setPassword(rs.getString("password"));
+            return user;
+        }
+    }
+
 }
