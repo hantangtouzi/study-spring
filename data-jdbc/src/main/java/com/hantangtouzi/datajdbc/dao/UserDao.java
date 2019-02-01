@@ -58,7 +58,11 @@ public class UserDao {
         jdbcTemplate.update("insert into t_user(id, username, password) values (?, ? , ?)", user.getId(), user.getUsername(), user.getPassword());
     }
 
+    public void deleteUserById(Long userId) {
+        jdbcTemplate.update("delete from t_user where id = ?", userId);
+    }
+
     public void updateUser(User user) {
-        jdbcTemplate.update("insert into t_user(username, password) values (? , ?) where id = ?", user.getUsername(), user.getPassword(), user.getId());
+        jdbcTemplate.update("update t_user set username = ?, password = ? where id = ?", user.getUsername(), user.getPassword(), user.getId());
     }
 }

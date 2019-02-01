@@ -41,4 +41,27 @@ public class UserDaoTest {
             System.out.println(u);
         }
     }
+
+    @Test
+    public void deleteUserById() {
+        Long userId = 2L;
+        userDao.deleteUserById(userId);
+        List<User> users = userDao.findUsers();
+        for (User u : users) {
+            System.out.println(u);
+        }
+    }
+
+    @Test
+    public void updateUser() {
+        User user = new User();
+        user.setId(2L);
+        user.setUsername("abc");
+        user.setPassword("abc");
+        userDao.updateUser(user);
+        List<User> users = userDao.findUsers();
+        for (User u : users) {
+            System.out.println(u);
+        }
+    }
 }
