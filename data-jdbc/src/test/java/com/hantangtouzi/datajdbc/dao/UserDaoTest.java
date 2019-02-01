@@ -28,4 +28,17 @@ public class UserDaoTest {
             System.out.println(user);
         }
     }
+
+    @Test
+    public void addUser() {
+        User user = new User();
+        user.setId(10L);
+        user.setUsername("abc");
+        user.setPassword("abc");
+        userDao.addUser(user);
+        List<User> users = userDao.findUsers();
+        for (User u : users) {
+            System.out.println(u);
+        }
+    }
 }

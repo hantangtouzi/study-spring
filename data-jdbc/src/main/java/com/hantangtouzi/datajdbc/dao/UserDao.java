@@ -55,6 +55,10 @@ public class UserDao {
     }
 
     public void addUser(User user) {
+        jdbcTemplate.update("insert into t_user(id, username, password) values (?, ? , ?)", user.getId(), user.getUsername(), user.getPassword());
+    }
 
+    public void updateUser(User user) {
+        jdbcTemplate.update("insert into t_user(username, password) values (? , ?) where id = ?", user.getUsername(), user.getPassword(), user.getId());
     }
 }
