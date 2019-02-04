@@ -44,7 +44,7 @@ public class HomePage {
         @FindBy(css = "p")
         private WebElement message;
 
-        public Content andTheUserNameISDisplayer() {
+        public Content andTheUserNameIsDisplayed() {
             assertThat(message.getText()).isEqualTo("Hello user");
             return this;
         }
