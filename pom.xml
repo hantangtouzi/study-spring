@@ -35,6 +35,7 @@
         <module>security-web</module>
         <module>security-web-method</module>
         <module>security-hello</module>
+        <module>data-transaction</module>
     </modules>
 
     <properties>
