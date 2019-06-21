@@ -36,6 +36,7 @@
         <module>security-web-method</module>
         <module>security-hello</module>
         <module>data-transaction</module>
+        <module>di-introduce</module>
     </modules>
 
     <properties>
