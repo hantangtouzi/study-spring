@@ -37,6 +37,7 @@
         <module>security-hello</module>
         <module>data-transaction</module>
         <module>di-introduce</module>
+        <module>aop-introduce</module>
     </modules>
 
     <properties>
