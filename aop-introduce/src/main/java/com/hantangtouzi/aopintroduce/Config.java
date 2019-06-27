@@ -2,6 +2,7 @@ package com.hantangtouzi.aopintroduce;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * @author WilliamChang.
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
  */
 
 @Configuration
+@EnableAspectJAutoProxy
 public class Config {
     @Bean
     public UserDao userDao() {
