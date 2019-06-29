@@ -29,17 +29,36 @@ public class UserDao {
     public User getUserById(Long id) {
         Map<String, Object> map = new HashMap<>();
         map.put("id", id);
-        return namedParameterJdbcTemplate.queryForObject("select * from t_user where id = :id", map, new RowMapper<User>() {
+        return jdbcTemplate.queryForObject("select * from t_user where id = ?", new RowMapper<User>() {
             @Override
             public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+                System.out.println("rs=" + rs);
+                if (rs == null) {
+                    return null;
+                }
                 User user = new User();
                 user.setId(rs.getLong("id"));
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
                 return user;
             }
-        });
+        }, id);
     }
+
+    // public User getUserById(Long id) {
+    //     Map<String, Object> map = new HashMap<>();
+    //     map.put("id", id);
+    //     return namedParameterJdbcTemplate.queryForObject("select * from t_user where id = :id", map, new RowMapper<User>() {
+    //         @Override
+    //         public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+    //             User user = new User();
+    //             user.setId(rs.getLong("id"));
+    //             user.setUsername(rs.getString("username"));
+    //             user.setPassword(rs.getString("password"));
+    //             return user;
+    //         }
+    //     });
+    // }
 
     public List<User> findUsers() {
         return jdbcTemplate.query("select * from t_user", new RowMapper<User>() {
