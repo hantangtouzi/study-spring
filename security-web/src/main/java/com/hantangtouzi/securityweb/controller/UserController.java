@@ -23,6 +23,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @GetMapping("/index")
+    public String index() {
+        return "userInfo";
+    }
+
     @RequestMapping("/get/{id}")
     public String getUserById(@PathVariable("id") Long id, Model model) {
         User user = userService.getUserById(id);
