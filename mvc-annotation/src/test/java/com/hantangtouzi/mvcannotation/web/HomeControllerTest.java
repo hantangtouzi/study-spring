@@ -1,8 +1,7 @@
-package com.hantangtouzi.datajdbc.web;
+package com.hantangtouzi.mvcannotation.web;
 
 import com.hantangtouzi.mvcannotation.config.MyWebApplicationInitializer;
 import com.hantangtouzi.mvcannotation.config.WebConfig;
-import com.hantangtouzi.mvcannotation.web.HomeController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -11,7 +10,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 
 /**
@@ -29,6 +28,6 @@ public class HomeControllerTest {
         HomeController controller = new HomeController();
 
         MockMvc mockMvc = standaloneSetup(controller).build();
-        mockMvc.perform(get("/home")).andExpect(view().name("home"));
+        mockMvc.perform(get("/")).andExpect(view().name("home"));
     }
 }

@@ -22,8 +22,10 @@ public class UserController {
 
     @RequestMapping("/list/{id}")
     public String list(@PathVariable("id") Long id, Model model) {
-        User user = userService.getUserById(id);
-        if (user == null) {
+        System.out.println("id = " + id);
+        User user = userService.getUserById(1L);
+        System.out.println("user = " + user);
+        if (id == 3) {
             throw new UserNotFoundException();
         }
         model.addAttribute("user", user);
