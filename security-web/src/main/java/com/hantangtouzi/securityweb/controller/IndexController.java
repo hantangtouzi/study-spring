@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class IndexController {
     @GetMapping("/")
     public String hello(Model model) {
-        model.addAttribute("message", "Hello World come from thymeleaf!");
+        model.addAttribute("message", "Hello World comes from thymeleaf!");
         return "index";
     }
 }
