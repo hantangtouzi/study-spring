@@ -24,28 +24,21 @@ public class UserDao {
     // private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     public User getUserById(Long id) {
-        return jdbcTemplate.queryForObject("select * from t_user where id = ?", new Object[]{id}, new RowMapper<User>() {
-            @Override
-            public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-                User user = new User();
-                user.setId(rs.getLong("id"));
-                user.setUsername(rs.getString("username"));
-                user.setPassword(rs.getString("password"));
-                return user;
-            }
-        });
+        return jdbcTemplate.queryForObject("select * from t_user where id = ?", new Object[]{id}, new UserRowMapper());
     }
 
     public List<User> findUsers() {
-        return jdbcTemplate.query("select * from t_user", new RowMapper<User>() {
-            @Override
-            public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-                User user = new User();
-                user.setId(rs.getLong("id"));
-                user.setUsername(rs.getString("username"));
-                user.setPassword(rs.getString("password"));
-                return user;
-            }
-        });
+        return jdbcTemplate.query("select * from t_user", new UserRowMapper());
+    }
+
+    private final class UserRowMapper implements RowMapper<User> {
+        @Override
+        public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+            User user = new User();
+            user.setId(rs.getLong("id"));
+            user.setUsername(rs.getString("username"));
+            user.setPassword(rs.getString("password"));
+            return user;
+        }
     }
 }
