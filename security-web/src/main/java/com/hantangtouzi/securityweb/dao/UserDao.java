@@ -4,14 +4,11 @@ import com.hantangtouzi.securityweb.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author WilliamChang.
@@ -22,14 +19,12 @@ import java.util.Map;
 public class UserDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
-
-    @Autowired
-    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+    //
+    // @Autowired
+    // private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
     public User getUserById(Long id) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("id", id);
-        return namedParameterJdbcTemplate.queryForObject("select * from t_user where id = :id", map, new RowMapper<User>() {
+        return jdbcTemplate.queryForObject("select * from t_user where id = ?", new Object[]{id}, new RowMapper<User>() {
             @Override
             public User mapRow(ResultSet rs, int rowNum) throws SQLException {
                 User user = new User();
